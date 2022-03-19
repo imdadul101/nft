@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    * {
+      margin: 0;
+      font-family: "Roboto", sans-serif;
+    }
+
+    .parent {
+      display: flex;
+      height: 100vh;
+    }
+
+    .sidebar {
+      border: 1px solid green;
+      padding: 8px;
+      width: 300px;
+      background-color: #fff;
+    }
+
+    .content {
+      border: 1px solid blue;
+      padding: 30px;
+      width: 100%;
+      background-image: linear-gradient(lightgrey,white);
+
+    }
+
+    .rightSidebar {
+      border: 1px solid red;
+      padding: 8px;
+      width: 300px;
+      background-color: #fff;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .BrandName {
+      margin-left: 4px;
+    }
+
+    .circle {
+      width: 20px;
+      height: 20px;
+      background-color: rgb(37, 37, 37);
+      border-radius: 35px;
+    }
+
+    .caption {
+      color: #999;
+      font-size: 8px;
+    }
+
+    .title {
+      display: flex;
+    }
+
+    .square {
+      width: 15px;
+      height: 15px;
+      margin-left: 4px;
+    }
+
+    .menuName {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 20px;
+      color: #a2adc0;
+    }
+    .help {
+      color: #a2adc0;
+      padding: 8px;
+      margin-bottom: 12px;
+    }
+    .menuName:hover {
+      background-color: #f3f6ff;
+      color: #3765FE;
+      font-family: 800;
+    }
+    .menuTitle {
+      font-size: 8px;
+      margin-left: 4px;
+    }
+    .searchBox {
+      display: flex;
+      background-color: white;
+      border-radius: 25px;
+      width: 350px;
+      padding: 10px;
+    }
+    .searchinput {
+      width: 90%;
+      border: none;
+      outline: none;
+    }
+   .titleCont {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .view {
+      color: #3765FE;
+    }
+   .nftcontainer
+   {
+      display: flex;
+      justify-content: space-between;
+   }
+    .card {
+      width: 250px;
+      height: 350px;
+      background-color: white;
+      overflow: hidden;
+      border-radius: 20px;
+      padding: 8px;
+    }
+    .imagecard {
+      width: 250px;
+      overflow: hidden;
+      height: 250px;
+      position: relative;
+      border-radius: 20px;
+    }
+
+    .boxnft {
+      background-color: white;
+      padding: 8px;
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      border-radius: 20px;
+
+    }
+
+    .contentcard {
+      display: flex;
+      padding: 8px 0px 8px 0px;
+      
+    }
+
+    .ofspace {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px;
+
+    }
+    .cc {
+        color: #a2adc0;
+        padding-right: 10px;
+    }
+    .mm{
+        color: #a2adc0;
+    }
+    .cd{
+        color: #a2adc0;
+        padding-left: 55px;
+    }
+    .checkicon{
+      color:burlywood;
+    }
+    .smallcontent {
+      background-color: white;
+      margin-top: 30%;
+      padding: 10px;
+    }
+    .detail1 {
+      display: flex;
+      justify-content: space-between;
+      font-size: 15px;
+      color: #A2ADC0
+    }
+
+    .bold {
+      font-weight: bold;
+      color: black;
+    }
+
+    .inputcopy {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      width: 150px;
+      color: #A2ADC0
+    }
+
+    .link {
+      border: none;
+      outline: none;
+      width: 90%;
+      font-size: 13px;
+    }
+
+    .ETH {
+      background-color: #dce2ee;
+      border-radius: 30px;
+      margin-top: 20px;
+      width: 100px;
+      height: 30px;
+      font-size: 15px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+    }
+
+    .gray {
+      color: #A2ADC0;
+    }
+    .button {
+      border-radius: 20px;
+      margin-top: 20px;
+      height: 35px;
+      width: 170px;
+      border-color: 1px solid #A2ADC0;
+    }
+    .buttontext {
+      text-align: center;
+      font-size: 13px;
+      color: rgb(56, 56, 238);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="parent">
+    <section class="sidebar">
+      <div class="logo">
+        <div class="icon">
+          <div class="circle"></div>
+        </div>
+        <div class="BrandName">
+          <div class="title">
+            <h5 class="company">Ofspace LLC</h5>
+            <div class="square"></div>
+          </div>
+
+          <p class="caption">Creator</p>
+        </div>
+      </div>
+      <br />
+      <div class="menu">
+        <div class="menuName">
+          <i class="fa-brands fa-windows"></i>
+          <p class="menuTitle">Overview</p>
+        </div>
+        <div class="menuName">
+          <i class="fa-solid fa-list"></i>
+          <p class="menuTitle">Active bits</p>
+        </div>
+        <div class="menuName">
+          <i class="fa-brands fa-buromobelexperte"></i>
+          <p class="menuTitle">My Collection</p>
+        </div>
+        <div class="menuName">
+          <i class="fa-solid fa-chart-line"></i>
+          <p class="menuTitle">Market</p>
+        </div>
+        <div class="menuName">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <p class="menuTitle">Sales</p>
+        </div>
+        <div class="menuName">
+          <i class="fa-solid fa-clock"></i>
+          <p class="menuTitle">Schedule</p>
+
+        </div>
+        <h5 class="help">HELP</h5>
+        <div class="menuName">
+          <i class="fa-solid fa-message"></i>
+          <p class="menuTitle">Message</p>
+        </div>
+        <div class="menuName">
+          <i class="fa-solid fa-headset"></i>
+          <p class="menuTitle">Support</p>
+        </div>
+
+
+        <div class="smallcontent">
+          <div class="detail1">
+            <p class="bold">Your Balance</p>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+          <div class="inputcopy">
+            <input class="link" type="link" placeholder="crp97rewqatoppuey....">
+            <i class="fa-solid fa-clone"></i>
+          </div><br>
+          <h1>$687,299.10</h1>
+          <div class="ETH">
+            <i class="fa-brands fa-ethereum"></i>
+            <div>
+              <span>9.04</span>
+              <span class="gray">ETH</span>
+            </div>
+          </div>
+          <div class="button">
+            <button class="buttontext">Topup your balance</button>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="searchBox">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input class="searchinput" type="text" placeholder="Search...">
+      </div><br />
+      <div class="titleCont">
+        <h5>Top Collectibles</h5>
+        <p class="view">View all</p>
+      </div>
+      <br />
+      <div class="nftcontainer">
+
+
+      <div class="card">
+        <div class="imagecard">
+          <div class="boxnft">
+            <i class="fa-brands fa-ethereum"></i>
+            <span>9.04</span>
+            <span>ETH</span>
+          </div>
+          <img
+            src="./imdadul_files/1.jpg"
+            alt=""
+            width="250px"
+            height="250px">
+        </div>
+
+        <div class="contentcard">
+          <span class="cc">Ofspace NFT</span>
+          <i class="fa-solid fa-circle-check checkicon"></i>
+          <span class="cd">120 Likes</span>
+        </div>
+        <h4>NFT Cube Design#92</h4>
+        <div class="ofspace">
+          <div class="square">
+              <img height=30px width=30px src="./imdadul_files/man.png" alt="">
+          </div>
+          <span class="mm">@ofspace99</span>
+
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="imagecard">
+          <div class="boxnft">
+            <i class="fa-brands fa-ethereum"></i>
+            <span>9.04</span>
+            <span>ETH</span>
+          </div>
+          <img
+            src="./imdadul_files/2.jpg"
+            alt=""
+            width="250px"
+            height="250px">
+        </div>
+
+        <div class="contentcard">
+          <span class="cc">Ofspace NFT</span>
+          <i class="fa-solid fa-circle-check checkicon"></i>
+          <span class="cd">120 Likes</span>
+        </div>
+        <h4>NFT Cube Design#92</h4>
+        <div class="ofspace">
+          <div class="square">
+              <img height=30px width=30px src="./imdadul_files/woman.png" alt="">
+          </div>
+          <span class="mm">@ofspace99</span>
+
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="imagecard">
+          <div class="boxnft">
+            <i class="fa-brands fa-ethereum"></i>
+            <span>9.04</span>
+            <span>ETH</span>
+          </div>
+          <img
+            src="./imdadul_files/3.jpg"
+            alt=""
+            width="250px"
+            height="250px">
+        </div>
+
+        <div class="contentcard">
+          <span class="cc">Ofspace NFT</span>
+          <i class="fa-solid fa-circle-check checkicon"></i>
+          <span class="cd">120 Likes</span>
+        </div>
+        <h4>NFT Cube Design#92</h4>
+        <div class="ofspace">
+          <div class="square">
+              <img height=30px width=30px src="./imdadul_files/gamer.png" alt="">
+          </div>
+          <span class="mm">@ofspace99</span>
+
+        </div>
+      </div>
+
+    </div>
+
+      
+
+      
+
+
+
+    </section>
+    <section class="rightSidebar"></section>
+  </div>
+
+</body>
+
+</html>
